@@ -1,14 +1,13 @@
 <script setup lang="ts">
 import { useRegisterSW } from 'virtual:pwa-register/vue'
 // replaced dynamically
-const reloadSW: any = 'true'
+const reloadSW: any = 'false'
 const { offlineReady, needRefresh, updateServiceWorker } = useRegisterSW({
   immediate: true,
   onRegistered(r) {
     if (reloadSW === 'true') {
       r &&
         setInterval(async () => {
-          console.log('Checking for sw update')
           await r.update()
         }, 2000 /* 20s for testing purposes */)
     } else {
@@ -33,27 +32,14 @@ const close = async () => {
   </div>
 </template>
 
-<style>
+<style scoped lang="css">
 .pwa-toast {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  margin: 16px;
-  padding: 12px;
-  border: 1px solid #8885;
-  border-radius: 4px;
-  z-index: 1;
-  text-align: left;
-  box-shadow: 3px 4px 5px 0px #8885;
+  @apply fixed right-0 bottom-0 border border-neutral rounded-md z-10 text-left shadow-lg bg-white m-4 p-4 w-1/5;
 }
 .pwa-toast .message {
-  margin-bottom: 8px;
+  @apply text-sm mb-2;
 }
 .pwa-toast button {
-  border: 1px solid #8885;
-  outline: none;
-  margin-right: 5px;
-  border-radius: 2px;
-  padding: 3px 10px;
+  @apply border border-neutral text-sm px-1 py-0.5 rounded-md hover:border-neutral-focus;
 }
 </style>
