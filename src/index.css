@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+#app {
+  font-family: 'Comfortaa', cursive !important;
+}
+.page-title {
+  @apply text-4xl text-white font-bold sm:text-5xl;
+}
+
+.app-btn {
+  @apply flex text-white bg-neutral border-gray-500 border px-4 py-2 rounded-full items-center hover:bg-neutral-focus
+}
+/* Scrollbar */
+/* Width*/
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-black;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-500 border-4 border-solid border-transparent border-4 w-2 rounded-box;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #a0aec0;
+}
+.navbar:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: -webkit-gradient(linear, left top, right top, from(#E39600), color-stop(#EA4C89), color-stop(#8F48EB), to(#1DA1F2));
+  background: linear-gradient(to right, #E39600, #EA4C89, #8F48EB, #1DA1F2);
+}
