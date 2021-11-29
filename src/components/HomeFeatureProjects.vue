@@ -8,15 +8,21 @@
       <home-feature-projects-item
         title="MJ Home"
         url="https://www.mjhome.co.nz"
-        image="src/assets/mj-home-logo.png"
         description="A properties rental website where customers can search for properties in their area, contact agent for rental enquiry and more."
-      />
+      >
+        <template #image>
+          <img src="../assets/mj-home-logo.png" class="h-24 w-auto sm:m-auto" alt="MJ Home" />
+        </template>
+      </home-feature-projects-item>
       <home-feature-projects-item
         title="Hanoi Eatery"
         url="https://hanoi-eatery.netlify.app/"
-        image="src/assets/hanoi-eatery-logo.png"
         description="A Vietnamese restaurant website where customers can purchase food online and pickup."
-      />
+      >
+        <template #image>
+          <img src="../assets/hanoi-eatery-logo.png" class="h-24 w-auto sm:m-auto" alt="MJ Home" />
+        </template>
+      </home-feature-projects-item>
     </div>
   </div>
 </template>

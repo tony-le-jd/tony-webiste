@@ -1,7 +1,7 @@
 <template>
   <div class="space-y-4">
     <div class="project-item-image">
-      <img :src="image" alt="Project image" />
+      <slot name="image" />
     </div>
     <div class="project-item-body">
       <p class="project-item-title">{{ title }}</p>
@@ -47,9 +47,6 @@ export default defineComponent({
 })
 </script>
 <style scoped lang="css">
-.project-item-image img {
-  @apply rounded-xl h-auto w-full border-neutral-focus border max-w-screen-lg mx-auto;
-}
 .project-item-body {
   @apply text-left max-w-3xl mx-auto space-y-3;
 }

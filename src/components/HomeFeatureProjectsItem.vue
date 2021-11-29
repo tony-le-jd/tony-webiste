@@ -1,7 +1,7 @@
 <template>
   <a :href="url" class="fp-item">
     <div class="flex sm:items-center sm:col-span-1">
-      <img :src="image" class="h-24 w-auto sm:m-auto" :alt="title" />
+      <slot name="image" />
     </div>
     <div class="space-y-3 sm:col-span-3">
       <p class="fp-item-title">{{ title }}</p>
@@ -17,10 +17,6 @@ export default defineComponent({
   name: 'HomeFeatureProjectsItem',
   props: {
     url: { type: String, required: true },
-    image: {
-      type: String,
-      required: true,
-    },
     title: {
       type: String,
       required: true,

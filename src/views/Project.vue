@@ -22,6 +22,13 @@ import ProjectItem from '../components/ProjectItem.vue'
         url="mjhome.co.nz"
         image="src/assets/mj-home-screenshot.png"
       >
+        <template #image>
+          <img
+            src="../assets/mj-home-screenshot.png"
+            alt="MJ Home"
+            class='project-item-image'
+          />
+        </template>
         <template #technology>
           <div class="flex items-center space-x-3">
             <p class="text-base-300 space-y-3 leading-7 tracking-wide">Technology Stacks:</p>
@@ -40,6 +47,13 @@ import ProjectItem from '../components/ProjectItem.vue'
         url="hanoi-eatery.netlify.app"
         image="src/assets/hanoi-eatery-screenshot.png"
       >
+        <template #image>
+          <img
+            src="../assets/hanoi-eatery-screenshot.png"
+            alt="Hanoi Eatery"
+            class='project-item-image'
+          />
+        </template>
         <template #technology>
           <div class="flex items-center space-x-3">
             <p class="text-base-300 space-y-3 leading-7 tracking-wide">Technology Stacks:</p>
@@ -57,6 +71,13 @@ import ProjectItem from '../components/ProjectItem.vue'
         url=""
         image="src/assets/expense-tracking-screenshot.png"
       >
+        <template #image>
+          <img
+            src="../assets/expense-tracking-screenshot.png"
+            alt="Expense Tracking"
+            class='project-item-image'
+          />
+        </template>
         <template #technology>
           <div class="flex items-center space-x-3">
             <p class="text-base-300 space-y-3 leading-7 tracking-wide">Technology Stacks:</p>
@@ -73,6 +94,13 @@ import ProjectItem from '../components/ProjectItem.vue'
         url=""
         image="src/assets/portal-screenshot.png"
       >
+        <template #image>
+          <img
+            src="../assets/portal-screenshot.png"
+            alt="Shosha Portal"
+            class='project-item-image'
+          />
+        </template>
         <template #technology>
           <div class="flex items-center space-x-3">
             <p class="text-base-300 space-y-3 leading-7 tracking-wide">Technology Stacks:</p>
@@ -84,11 +112,18 @@ import ProjectItem from '../components/ProjectItem.vue'
       </project-item>
       <!-- Shosha Magento -->
       <project-item
-        title="Shosha ECommerce"
+        title="Shosha eCommerce"
         description="A Magento Ecommerce website for the largest Vape company in New Zealand."
         url="shosha.co.nz"
         image="src/assets/shosha-screenshot.png"
       >
+        <template #image>
+          <img
+            src="../assets/shosha-screenshot.png"
+            alt="Shosha eCommerce"
+            class='project-item-image'
+          />
+        </template>
         <template #technology>
           <div class="flex items-center space-x-3">
             <p class="text-base-300 space-y-3 leading-7 tracking-wide">Technology Stacks:</p>
@@ -99,3 +134,8 @@ import ProjectItem from '../components/ProjectItem.vue'
     </div>
   </div>
 </template>
+<style lang='css'>
+.project-item-image {
+  @apply rounded-xl h-auto w-full border-neutral-focus border max-w-screen-lg mx-auto;
+}
+</style>
