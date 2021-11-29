@@ -11,7 +11,7 @@
       <slot name="technology" />
       <button class="app-btn" v-if="url !== ''">
         <a :href="'https://' + url" class="flex items-center">
-          <span class="self-center">{{ url }}</span> <arrow-up-icon class="w-5 h-5 ml-1 rotate-45 text-gray-500"
+          <span class="self-center">{{ url }}</span> <arrow-up-icon class="w-5 h-5 ml-1 fill-current rotate-45 text-gray-500"
         /></a>
       </button>
     </div>
@@ -19,14 +19,13 @@
 </template>
 
 <script lang="ts">
-import { ArrowUpIcon } from '@heroicons/vue/solid'
 import { defineComponent } from 'vue'
+
+import ArrowUpIcon from './icons/ArrowUpIcon.vue'
 
 export default defineComponent({
   name: 'ProjectItem',
-  components: {
-    ArrowUpIcon,
-  },
+  components: { ArrowUpIcon },
   props: {
     image: {
       type: String,

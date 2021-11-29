@@ -13,7 +13,7 @@
     </div>
     <div class="home-links">
       <a href="https://github.com/kOnkupa"><img src="../assets/GitHub-Mark-64px.png" alt="Github image" class="h-8 w-8 filter invert" /></a>
-      <a href="mailto:theton369@gmail.com" class="btn rounded-full">Email Me</a>
+      <a href="mailto:theton369@gmail.com" class="app-btn">Email Me</a>
     </div>
   </div>
 </template>
