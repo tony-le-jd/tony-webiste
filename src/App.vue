@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import ReloadPrompt from './components/ReloadPrompt.vue'
 import TheNavigation from './layout/TheNavigation.vue'
 </script>
 
@@ -11,6 +12,7 @@ import TheNavigation from './layout/TheNavigation.vue'
           <component :is="Component" />
         </transition>
       </router-view>
+      <reload-prompt />
     </main>
   </div>
 </template>
