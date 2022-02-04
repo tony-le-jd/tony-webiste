@@ -6,7 +6,7 @@ import TheNavigation from './layout/TheNavigation.vue'
 <template>
   <div class="bg-black">
     <the-navigation />
-    <main class="max-w-screen-lg mx-auto px-4 mt-16 py-6 min-h-screen sm:px-6 sm:py-8">
+    <main class="main-content">
       <router-view v-slot="{ Component }">
         <transition name="fade" mode="out-in">
           <component :is="Component" />

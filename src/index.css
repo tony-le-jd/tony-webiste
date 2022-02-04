@@ -31,7 +31,7 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #a0aec0;
 }
-.navbar:before {
+.navbar-container:before {
   content: '';
   position: absolute;
   top: 0;
@@ -40,4 +40,7 @@
   height: 4px;
   background: -webkit-gradient(linear, left top, right top, from(#E39600), color-stop(#EA4C89), color-stop(#8F48EB), to(#1DA1F2));
   background: linear-gradient(to right, #E39600, #EA4C89, #8F48EB, #1DA1F2);
+}
+.main-content {
+  @apply max-w-screen-lg mx-auto px-4 mt-16 py-6 min-h-screen sm:px-6 sm:py-8;
 }

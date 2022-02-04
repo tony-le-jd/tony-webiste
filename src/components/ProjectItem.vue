@@ -11,7 +11,7 @@
       <slot name="technology" />
       <button class="app-btn" v-if="url !== ''">
         <a :href="'https://' + url" class="flex items-center">
-          <span class="self-center">{{ url }}</span> <arrow-up-icon class="w-5 h-5 ml-1 fill-current rotate-45 text-gray-500"
+          <span class="self-center">{{ url }}</span> <arrow-up-icon class="project-item-icon"
         /></a>
       </button>
     </div>
@@ -55,5 +55,8 @@ export default defineComponent({
 }
 .project-item-description {
   @apply text-base-300 space-y-3 leading-7 tracking-wide;
+}
+.project-item-icon {
+  @apply w-5 h-5 ml-1 fill-current rotate-45 text-gray-500;
 }
 </style>

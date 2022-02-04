@@ -14,7 +14,7 @@ import ProjectItem from '../components/ProjectItem.vue'
   <div>
     <h1 class="page-title">Projects</h1>
     <div class="divider" />
-    <div class="space-y-14 sm:space-y-20">
+    <div class="pi-container">
       <!-- MJ Home -->
       <project-item
         title="MJ Home"
@@ -30,13 +30,13 @@ import ProjectItem from '../components/ProjectItem.vue'
           />
         </template>
         <template #technology>
-          <div class="flex items-center space-x-3">
-            <p class="text-base-300 space-y-3 leading-7 tracking-wide">Technology Stacks:</p>
-            <vuejs-icon class="h-8 w-8" />
-            <tailwindcss-icon class="h-8 w-8" />
-            <contentful-icon class="h-8 w-8" />
-            <mailchimp-icon class="h-8 w-8" />
-            <nodejs-icon class="h-8 w-8" />
+          <div class="pi-content">
+            <p class="pi-title">Technology Stacks:</p>
+            <vuejs-icon class="pi-icon" />
+            <tailwindcss-icon class="pi-icon" />
+            <contentful-icon class="pi-icon" />
+            <mailchimp-icon class="pi-icon" />
+            <nodejs-icon class="pi-icon" />
           </div>
         </template>
       </project-item>
@@ -55,12 +55,12 @@ import ProjectItem from '../components/ProjectItem.vue'
           />
         </template>
         <template #technology>
-          <div class="flex items-center space-x-3">
-            <p class="text-base-300 space-y-3 leading-7 tracking-wide">Technology Stacks:</p>
-            <vuejs-icon class="h-8 w-8" />
-            <tailwindcss-icon class="h-8 w-8" />
-            <nodejs-icon class="h-8 w-8" />
-            <woo-icon class="h-8 w-8" />
+          <div class="pi-content">
+            <p class="pi-title">Technology Stacks:</p>
+            <vuejs-icon class="pi-icon" />
+            <tailwindcss-icon class="pi-icon" />
+            <nodejs-icon class="pi-icon" />
+            <woo-icon class="pi-icon" />
           </div>
         </template>
       </project-item>
@@ -79,11 +79,11 @@ import ProjectItem from '../components/ProjectItem.vue'
           />
         </template>
         <template #technology>
-          <div class="flex items-center space-x-3">
-            <p class="text-base-300 space-y-3 leading-7 tracking-wide">Technology Stacks:</p>
-            <vuejs-icon class="h-8 w-8" />
-            <nodejs-icon class="h-8 w-8" />
-            <tailwindcss-icon class="h-8 w-8" />
+          <div class="pi-content">
+            <p class="pi-title">Technology Stacks:</p>
+            <vuejs-icon class="pi-icon" />
+            <nodejs-icon class="pi-icon" />
+            <tailwindcss-icon class="pi-icon" />
           </div>
         </template>
       </project-item>
@@ -102,11 +102,11 @@ import ProjectItem from '../components/ProjectItem.vue'
           />
         </template>
         <template #technology>
-          <div class="flex items-center space-x-3">
-            <p class="text-base-300 space-y-3 leading-7 tracking-wide">Technology Stacks:</p>
-            <react-icon class="h-8 w-8" />
-            <material-ui-icon class="h-8 w-8" />
-            <nodejs-icon class="h-8 w-8" />
+          <div class="pi-content">
+            <p class="pi-title">Technology Stacks:</p>
+            <react-icon class="pi-icon" />
+            <material-ui-icon class="pi-icon" />
+            <nodejs-icon class="pi-icon" />
           </div>
         </template>
       </project-item>
@@ -125,9 +125,9 @@ import ProjectItem from '../components/ProjectItem.vue'
           />
         </template>
         <template #technology>
-          <div class="flex items-center space-x-3">
-            <p class="text-base-300 space-y-3 leading-7 tracking-wide">Technology Stacks:</p>
-            <magento-icon class="h-8 w-8" />
+          <div class="pi-content">
+            <p class="pi-title">Technology Stacks:</p>
+            <magento-icon class="pi-icon" />
           </div>
         </template>
       </project-item>
@@ -137,5 +137,17 @@ import ProjectItem from '../components/ProjectItem.vue'
 <style lang='css'>
 .project-item-image {
   @apply rounded-xl h-auto w-full border-neutral-focus border max-w-screen-lg mx-auto;
+}
+.pi-container {
+  @apply space-y-14 sm:space-y-20;
+}
+.pi-content {
+  @apply flex items-center space-x-3;
+}
+.pi-title {
+  @apply text-base-300 space-y-3 leading-7 tracking-wide;
+}
+.pi-icon {
+  @apply h-8 w-8;
 }
 </style>

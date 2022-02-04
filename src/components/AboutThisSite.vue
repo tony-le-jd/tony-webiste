@@ -1,8 +1,8 @@
 <template>
-  <div class="space-y-3">
-    <p class="text-2xl text-white sm:text-3xl">About this site</p>
-    <p class="text-gray-400">In case you were wondering about this site:</p>
-    <ul role="list" class="list-disc list-inside space-y-1 tracking-wide text-gray-400">
+  <div class="ats-container">
+    <h2 class="ats-title">About this site</h2>
+    <p class="ats-content">In case you were wondering about this site:</p>
+    <ul role="list" class="ats-list">
       <li>Designed and built on a Mac using WebStorm.</li>
       <li>Coded in Vue.js, TailwindCSS, Vite.</li>
       <li>Hosted on Netlify.</li>
@@ -18,3 +18,17 @@ export default defineComponent({
   name: 'AboutThisSite',
 })
 </script>
+<style lang="css" scoped>
+.ats-container {
+  @apply space-y-3;
+}
+.ats-title {
+  @apply text-2xl text-white sm:text-3xl;
+}
+.ats-content {
+  @apply text-gray-400;
+}
+.ats-list {
+  @apply list-disc list-inside space-y-1 tracking-wide text-gray-400;
+}
+</style>
