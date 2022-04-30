@@ -44,7 +44,7 @@ import ProjectItem from '../components/ProjectItem.vue'
       <project-item
         title="Hanoi Eatery"
         description="A Vietnamese restaurant website where customers can purchase food online and pickup. I have integrated the payment gateway with NZ PayMark and have also integrated the restaurant menu with WooCommerce."
-        url="hanoi-eatery.netlify.app"
+        url="hanoieatery.co.nz"
         image="src/assets/hanoi-eatery-screenshot.png"
       >
         <template #image>

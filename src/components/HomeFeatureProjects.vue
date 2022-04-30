@@ -16,7 +16,7 @@
       </home-feature-projects-item>
       <home-feature-projects-item
         title="Hanoi Eatery"
-        url="https://hanoi-eatery.netlify.app/"
+        url="https://hanoieatery.co.nz/"
         description="A Vietnamese restaurant website where customers can purchase food online and pickup."
       >
         <template #image>

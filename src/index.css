@@ -9,10 +9,18 @@
 .page-title {
   @apply text-4xl text-white font-bold sm:text-5xl;
 }
-
 .app-btn {
   @apply flex text-white bg-neutral border-gray-500 border px-4 py-2 rounded-full items-center hover:bg-neutral-focus
 }
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
 /* Scrollbar */
 /* Width*/
 ::-webkit-scrollbar {
@@ -42,5 +50,5 @@
   background: linear-gradient(to right, #E39600, #EA4C89, #8F48EB, #1DA1F2);
 }
 .main-content {
-  @apply max-w-screen-lg mx-auto px-4 mt-16 py-6 min-h-screen sm:px-6 sm:py-8;
+  @apply max-w-screen-lg mx-auto px-4 mt-16 py-6 sm:px-6 sm:py-8;
 }
