@@ -6,9 +6,9 @@ const height = `calc(${window.innerHeight}px - 7.5rem)`
 </script>
 
 <template>
-  <div class="bg-black">
+  <div class="app-container">
     <the-navigation />
-    <main class="main-content" :style="{minHeight: height}">
+    <main class="main-content" :style="{ minHeight: height }">
       <router-view v-slot="{ Component }">
         <transition name="fade" mode="out-in">
           <component :is="Component" />
@@ -19,3 +19,11 @@ const height = `calc(${window.innerHeight}px - 7.5rem)`
     <the-footer />
   </div>
 </template>
+<style>
+.app-container {
+  @apply bg-black;
+}
+.dividers {
+  @apply divider;
+}
+</style>

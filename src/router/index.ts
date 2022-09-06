@@ -1,6 +1,6 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 
-export const routes: Array<RouteRecordRaw> = [
+export const routes = [
   {
     path: '/',
     name: 'Home',
@@ -17,7 +17,9 @@ export const routes: Array<RouteRecordRaw> = [
     component: () => import('../views/Project.vue'),
   },
 ]
+
 const router = createRouter({
+  // @ts-ignore
   history: createWebHistory(import.meta.env.BASE_URL),
   routes,
   scrollBehavior() {

@@ -2,18 +2,19 @@
 import { useQuery } from '@vue/apollo-composable'
 import { computed } from 'vue'
 
+import { getProjects } from '@/schemas/Project'
+import type { ProjectsType } from '@/typing'
+
 import ProjectItem from '../components/ProjectItem.vue'
-import ProjectItemShimmer from "../components/ProjectItemShimmer.vue";
-import { getProjects } from '../schemas/Project'
-import { ProjectsType } from '../typing'
+import ProjectItemShimmer from '../components/ProjectItemShimmer.vue'
 
 const { result, loading } = useQuery<ProjectsType>(getProjects)
-const projectsData = computed(() => result.value !== undefined ? result.value.projects.data : [])
+const projectsData = computed(() => (result.value !== undefined ? result.value.projects.data : []))
 </script>
 <template>
   <div>
     <h1 class="page-title">Projects</h1>
-    <div class="divider" />
+    <div class="dividers" />
     <div v-if="loading && !projectsData.length">
       <project-item-shimmer />
       <project-item-shimmer />
@@ -21,11 +22,7 @@ const projectsData = computed(() => result.value !== undefined ? result.value.pr
     </div>
     <div class="pi-container" v-else>
       <div v-for="project in projectsData" :key="project.attributes.project.id">
-        <project-item
-          :title="project.attributes.project.title"
-          :url="project.attributes.project.url"
-          :description="project.attributes.project.description"
-        >
+        <project-item :title="project.attributes.project.title" :url="project.attributes.project.url" :description="project.attributes.project.description">
           <template #image>
             <img
               v-if="project.attributes.project.image.data !== null"
@@ -37,13 +34,7 @@ const projectsData = computed(() => result.value !== undefined ? result.value.pr
           <template #technology>
             <div class="pi-content">
               <p class="pi-title">Technology Stacks:</p>
-              <img
-                v-for="(icon, index) in project.attributes.project.stacks.icons.data"
-                :key="index"
-                alt="icon"
-                :src="icon.attributes.url"
-                class="pi-icon"
-              />
+              <img v-for="(icon, index) in project.attributes.project.stacks.icons.data" :key="index" alt="icon" :src="icon.attributes.url" class="pi-icon" />
             </div>
           </template>
         </project-item>

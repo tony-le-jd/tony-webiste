@@ -10,7 +10,7 @@
         work with Vue.js, React.js, Node.js, etc. and I'm very excited to continue learning and improving my skills.
       </p>
     </div>
-    <div class="divider" />
+    <div class="dividers" />
     <about-this-site />
   </div>
 </template>
@@ -19,7 +19,7 @@ import { defineComponent } from 'vue'
 
 import AboutThisSite from '../components/AboutThisSite.vue'
 export default {
-  components: { AboutThisSite }
+  components: { AboutThisSite },
 }
 defineComponent({
   name: 'AboutMe',
@@ -27,6 +27,6 @@ defineComponent({
 </script>
 <style scoped lang="css">
 .about-intro {
-  @apply text-gray-400 tracking-wide space-y-3
+  @apply text-gray-400 tracking-wide space-y-3;
 }
 </style>

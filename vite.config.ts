@@ -1,7 +1,8 @@
-import replace from '@rollup/plugin-replace'
+import { fileURLToPath, URL } from 'node:url'
+
 import vue from '@vitejs/plugin-vue'
+import vueJsx from '@vitejs/plugin-vue-jsx'
 import { defineConfig } from 'vite'
-import eslintPlugin from 'vite-plugin-eslint'
 import { ManifestOptions, VitePWA, VitePWAOptions } from 'vite-plugin-pwa'
 
 const pwaOptions: Partial<VitePWAOptions> = {
@@ -56,5 +57,11 @@ if (process.env.SW === 'true') {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), eslintPlugin(), VitePWA(pwaOptions), replace(replaceOptions)],
+  plugins: [vue(), vueJsx(), VitePWA(pwaOptions)],
+  resolve: {
+    alias: {
+      // @ts-ignore
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+    },
+  },
 })
