@@ -25,11 +25,11 @@ const projectsData = computed(() => result.value !== undefined ? result.value.pr
           :title="project.attributes.project.title"
           :url="project.attributes.project.url"
           :description="project.attributes.project.description"
-          :image="`http://localhost:1337` + project.attributes.project.image.data.attributes.url"
         >
           <template #image>
             <img
-              :src="`http://localhost:1337` + project.attributes.project.image.data.attributes.url"
+              v-if="project.attributes.project.image.data !== null"
+              :src="project.attributes.project.image.data.attributes.url"
               :alt="project.attributes.project.title"
               class="project-item-image"
             />
@@ -41,7 +41,7 @@ const projectsData = computed(() => result.value !== undefined ? result.value.pr
                 v-for="(icon, index) in project.attributes.project.stacks.icons.data"
                 :key="index"
                 alt="icon"
-                :src="`http://localhost:1337` + icon.attributes.url"
+                :src="icon.attributes.url"
                 class="pi-icon"
               />
             </div>

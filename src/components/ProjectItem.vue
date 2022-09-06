@@ -27,10 +27,6 @@ export default defineComponent({
   name: 'ProjectItem',
   components: { ArrowUpIcon },
   props: {
-    image: {
-      type: String,
-      required: true,
-    },
     title: {
       type: String,
       required: true,
