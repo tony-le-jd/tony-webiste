@@ -1,6 +1,6 @@
 <template>
   <nav class="navbar-container">
-    <div class="navbar-start">
+    <div class="nav-center">
       <router-link to="/"><logo-horizontal class="navbar-logo" /></router-link>
     </div>
     <div class="navbar-end-container">
@@ -12,8 +12,9 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 
+import { routes } from '@/router'
+
 import LogoHorizontal from '../components/icons/LogoHorizontal.vue'
-import { routes } from '../router'
 
 export default defineComponent({
   name: 'TheNavigation',
@@ -28,6 +29,9 @@ export default defineComponent({
 <style scoped lang="css">
 .navbar-container {
   @apply navbar bg-black border-b border-gray-600 fixed top-0 w-full h-16;
+}
+.nav-center {
+  @apply navbar-start;
 }
 .navbar-logo {
   @apply w-20 sm:w-40;
