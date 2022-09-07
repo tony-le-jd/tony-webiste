@@ -1,5 +1,5 @@
 <template>
-  <div class="space-y-4 animate-pulse">
+  <div class="shimmer-container">
     <div class="shimmer-common shimmer-image" />
     <div class="shimmer-body">
       <div class="shimmer-common shimmer-title" />
@@ -10,8 +10,11 @@
   </div>
 </template>
 <style scoped lang="css">
+.shimmer-container {
+  @apply space-y-4 animate-pulse;
+}
 .shimmer-common {
-  @apply rounded-xl bg-neutral-focus
+  @apply rounded-xl bg-neutral-focus;
 }
 .shimmer-image {
   @apply h-60 lg:h-96 w-full max-w-screen-lg mx-auto;

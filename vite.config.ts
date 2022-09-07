@@ -32,28 +32,33 @@ const pwaOptions: Partial<VitePWAOptions> = {
       },
     ],
   },
+  injectRegister: 'auto',
+  registerType: 'autoUpdate',
   workbox: {
     cleanupOutdatedCaches: false,
     sourcemap: true,
   },
+  devOptions: {
+    enabled: true,
+  },
 }
 
-const replaceOptions = { __DATE__: new Date().toISOString() }
+// const replaceOptions = { __DATE__: new Date().toISOString() }
 
-if (process.env.SW === 'true') {
-  pwaOptions.srcDir = 'src'
-  pwaOptions.filename = 'sw.ts'
-  pwaOptions.strategies = 'injectManifest'
-  ;(pwaOptions.manifest as Partial<ManifestOptions>).name = "The Ton Le's Website"
-  ;(pwaOptions.manifest as Partial<ManifestOptions>).short_name = "Tony's Website"
-} else {
-  if (process.env.CLAIMS === 'true') pwaOptions.registerType = 'autoUpdate'
-
-  if (process.env.RELOAD_SW === 'true') {
-    // @ts-ignore
-    replaceOptions.__RELOAD_SW__ = 'true'
-  }
-}
+// if (process.env.SW === 'true') {
+//   pwaOptions.srcDir = 'src'
+//   pwaOptions.filename = 'sw.ts'
+//   pwaOptions.strategies = 'injectManifest'
+//   ;(pwaOptions.manifest as Partial<ManifestOptions>).name = "The Ton Le's Website"
+//   ;(pwaOptions.manifest as Partial<ManifestOptions>).short_name = "Tony's Website"
+// } else {
+//   if (process.env.CLAIMS === 'true') pwaOptions.registerType = 'autoUpdate'
+//
+//   if (process.env.RELOAD_SW === 'true') {
+//     // @ts-ignore
+//     replaceOptions.__RELOAD_SW__ = 'true'
+//   }
+// }
 
 // https://vitejs.dev/config/
 export default defineConfig({
