@@ -12,7 +12,7 @@
       </p>
     </div>
     <div class="home-hero--links">
-      <a href="https://github.com/kOnkupa"><img src="../assets/GitHub-Mark-64px.png" alt="Github image" class="home-hero--img" /></a>
+      <a href="https://github.com/tony-le-jd"><img src="../assets/GitHub-Mark-64px.png" alt="Github image" class="home-hero--img" /></a>
       <a href="mailto:theton369@gmail.com" class="app-btn">Email Me</a>
     </div>
   </div>
@@ -21,7 +21,7 @@
 .home-hero-container {
   @apply p-4 text-left sm:p-6;
 }
-.home-hero--title{
+.home-hero--title {
   @apply text-4xl text-white font-bold leading-normal sm:text-5xl;
 }
 .home-hero--intro {
